@@ -104,7 +104,6 @@ void execmd(char **argv, int argc, process* trace) {
     }
 
     else{
-        fprintf(stderr, "Command not found\n");
-        exit(EXIT_FAILURE);
+        execvp(argv[0],argv);
     }
 }
